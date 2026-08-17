@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CineVibe indica filmes e séries por vibe, gênero e momento.">
+
+  <title>Séries | CineVibe</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="seriestyle.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+
+      <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+        <div class="logo">
+          <img src="img/logo.png" alt="Logo do CineVibe">
+        </div>
+        <span class="fw-bold text-white fs-4">CineVibe</span>
+      </a>
+
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="filmes.html">Filmes</a></li>
+          <li class="nav-item"><a class="nav-link active" href="series.html">Séries</a></li>
+          <li class="nav-item"><a class="nav-link" href="categorias.html">Categorias</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <main class="container py-4">
+
+    <section class="hero mb-5">
+      <div class="hero-content">
+        <span class="eyebrow">Maratone por vibe</span>
+        <h1>Séries para cada momento</h1>
+        <p>
+          Escolha uma história pelo gênero, pelo clima do dia ou pela vontade de conhecer novos universos.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-4 intro">
+      <h2 class="display-5 section-title">Séries em destaque</h2>
+      <p class="lead">
+        Recomendadas para quem gosta de acompanhar personagens por várias temporadas e mergulhar em grandes histórias.
+      </p>
+    </section>
+
+    <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+
+      <article class="col">
+        <div class="card vibe-card h-100">
+          <div class="poster poster-cidade"><span>ST</span></div>
+          <div class="card-body">
+            <span class="badge badge-vibe mb-2">Ficção científica</span>
+            <h3 class="h5">Stranger Things</h3>
+            <p>Um grupo de amigos enfrenta criaturas e mistérios vindos de uma dimensão paralela.</p>
+            <p class="text-muted-custom mb-1"><strong>4 temporadas</strong></p>
+            <p class="mb-0"><strong>Por que assistir:</strong> Mistura nostalgia, suspense, amizade e cenas emocionantes.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="col">
+        <div class="card vibe-card h-100">
+          <div class="poster poster-misterio"><span>DA</span></div>
+          <div class="card-body">
+            <span class="badge badge-vibe mb-2">Suspense</span>
+            <h3 class="h5">Dark</h3>
+            <p>O desaparecimento de uma criança revela segredos envolvendo viagens no tempo e várias gerações.</p>
+            <p class="text-muted-custom mb-1"><strong>3 temporadas</strong></p>
+            <p class="mb-0"><strong>Por que assistir:</strong> Inteligente, intrigante e cheia de reviravoltas surpreendentes.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="col">
+        <div class="card vibe-card h-100">
+          <div class="poster poster-familia"><span>BK</span></div>
+          <div class="card-body">
+            <span class="badge badge-vibe mb-2">Comédia</span>
+            <h3 class="h5">Brooklyn Nine-Nine</h3>
+            <p>Detetives atrapalhados e carismáticos resolvem crimes em uma delegacia nada convencional.</p>
+            <p class="text-muted-custom mb-1"><strong>8 temporadas</strong></p>
+            <p class="mb-0"><strong>Por que assistir:</strong> Humor leve, personagens inesquecíveis e episódios rápidos.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="col">
+        <div class="card vibe-card h-100">
+          <div class="poster poster-cosmos"><span>CC</span></div>
+          <div class="card-body">
+            <span class="badge badge-vibe mb-2">Documental</span>
+            <h3 class="h5">Cosmos</h3>
+            <p>Uma viagem visual pelo universo, pela ciência e pelas grandes descobertas da humanidade.</p>
+            <p class="text-muted-custom mb-1"><strong>2 temporadas</strong></p>
+            <p class="mb-0"><strong>Por que assistir:</strong> Inspiradora, educativa e visualmente espetacular.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="col">
+        <div class="card vibe-card h-100">
+          <div class="poster poster-floresta"><span>TW</span></div>
+          <div class="card-body">
+            <span class="badge badge-vibe mb-2">Aventura</span>
+            <h3 class="h5">The Witcher</h3>
+            <p>Geralt de Rívia atravessa reinos perigosos enfrentando monstros, magia e intrigas políticas.</p>
+            <p class="text-muted-custom mb-1"><strong>3 temporadas</strong></p>
+            <p class="mb-0"><strong>Por que assistir:</strong> Fantasia épica com ação intensa e um universo rico em detalhes.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="col">
+        <div class="card vibe-card h-100">
+          <div class="poster poster-codigo"><span>BB</span></div>
+          <div class="card-body">
+            <span class="badge badge-vibe mb-2">Ação</span>
+            <h3 class="h5">Breaking Bad</h3>
+            <p>Um professor de química entra no mundo do crime para sustentar sua família.</p>
+            <p class="text-muted-custom mb-1"><strong>5 temporadas</strong></p>
+            <p class="mb-0"><strong>Por que assistir:</strong> Atuações brilhantes, tensão constante e evolução impressionante dos personagens.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="col">
+        <div class="card vibe-card h-100">
+          <div class="poster poster-lago"><span>TLOU</span></div>
+          <div class="card-body">
+            <span class="badge badge-vibe mb-2">Drama</span>
+            <h3 class="h5">The Last of Us</h3>
+            <p>Em um mundo devastado, Joel e Ellie atravessam perigos enquanto criam um forte vínculo emocional.</p>
+            <p class="text-muted-custom mb-1"><strong>1 temporada</strong></p>
+            <p class="mb-0"><strong>Por que assistir:</strong> Emocionante, cinematográfica e com personagens marcantes.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="col">
+        <div class="card vibe-card h-100">
+          <div class="poster poster-estrela"><span>SQ</span></div>
+          <div class="card-body">
+            <span class="badge badge-vibe mb-2">Thriller</span>
+            <h3 class="h5">Round 6</h3>
+            <p>Pessoas endividadas participam de jogos infantis mortais em busca de um prêmio milionário.</p>
+            <p class="text-muted-custom mb-1"><strong>1 temporada</strong></p>
+            <p class="mb-0"><strong>Por que assistir:</strong> Tenso, crítico e impossível de parar depois do primeiro episódio.</p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="footer py-4 mt-5">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <div class="logo" style="width:44px;height:44px">
+        <img src="img/logo.png" alt="Logo CineVibe">
+      </div>
+      <p class="mb-0 text-center text-md-start">
+        © 2026 CineVibe — projeto responsivo com HTML5, CSS3, Bootstrap e identidade visual autoral.
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

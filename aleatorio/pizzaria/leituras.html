@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechLibrary | Sugestão de Leituras</title>
+
+    <style>
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    position:relative;
+    transition:0.3s ease;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:white;
+    transition:0.3s ease;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover{
+    color:#dbeafe;
+}
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+            color:#333;
+        }
+
+        header{
+            background:#0d6efd;
+            color:white;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:15px 40px;
+        }
+
+        .logo{
+            display:flex;
+            align-items:center;
+            gap:10px;
+        }
+
+        .logo img{
+            width:60px;
+            height:60px;
+            object-fit:cover;
+            border-radius:50%;
+            background:white;
+        }
+
+        .logo h2{
+            font-size:24px;
+        }
+
+        main{
+            max-width:1100px;
+            margin:40px auto;
+            padding:0 20px;
+        }
+
+        .titulo{
+            text-align:center;
+            margin-bottom:40px;
+        }
+
+        .titulo h1{
+            color:#0d6efd;
+            margin-bottom:10px;
+        }
+
+        .livros{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+        }
+
+        .livro{
+            background:white;
+            border-radius:12px;
+            overflow:hidden;
+            box-shadow:0 4px 10px rgba(0,0,0,0.08);
+            transition:0.3s;
+        }
+
+        .livro:hover{
+            transform:translateY(-5px);
+        }
+
+        .livro img{
+            width:100%;
+            height:350px;
+            object-fit:cover;
+        }
+
+        .livro-conteudo{
+            padding:20px;
+        }
+
+        .livro h2{
+            color:#0d6efd;
+            font-size:20px;
+            margin-bottom:10px;
+        }
+
+        .autor{
+            font-weight:bold;
+            margin-bottom:12px;
+        }
+
+        .livro p{
+            line-height:1.6;
+        }
+
+        footer{
+            background:#0d6efd;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+
+        @media(max-width:768px){
+            header{
+                flex-direction:column;
+                gap:15px;
+                text-align:center;
+            }
+
+            }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo do site">
+            <h2>TechLibrary</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="leituras.html">Leituras</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="titulo">
+            <h1>Sugestões de Leituras</h1>
+            <p>Livros recomendados para estudantes e profissionais da área de Tecnologia da Informação.</p>
+        </section>
+
+        <section class="livros">
+
+            <article class="livro">
+                <img src="img/clean.jpg" alt="Livro Clean Code">
+                <div class="livro-conteudo">
+                    <h2>Clean Code</h2>
+                    <p class="autor">Autor: Robert C. Martin</p>
+                    <p>
+                        Livro essencial para aprender boas práticas de programação,
+                        escrita de código limpo, organização e manutenção de software.
+                    </p>
+                </div>
+            </article>
+
+            <article class="livro">
+                <img src="img/algoritmos.jpg" alt="Livro Entendendo Algoritmos">
+                <div class="livro-conteudo">
+                    <h2>Entendendo Algoritmos</h2>
+                    <p class="autor">Autor: Aditya Bhargava</p>
+                    <p>
+                        Explica algoritmos e estruturas de dados de forma visual e
+                        acessível para iniciantes em programação.
+                    </p>
+                </div>
+            </article>
+
+            <article class="livro">
+                <img src="img/java.png" alt="Livro JavaScript Eloquente">
+                <div class="livro-conteudo">
+                    <h2>JavaScript Eloquente</h2>
+                    <p class="autor">Autor: Marijn Haverbeke</p>
+                    <p>
+                        Apresenta os conceitos fundamentais do JavaScript, lógica de
+                        programação e desenvolvimento web moderno.
+                    </p>
+                </div>
+            </article>
+
+            <article class="livro">
+                <img src="img/pensar.webp" alt="Livro Não Me Faça Pensar">
+                <div class="livro-conteudo">
+                    <h2>Não Me Faça Pensar</h2>
+                    <p class="autor">Autor: Steve Krug</p>
+                    <p>
+                        Livro clássico sobre usabilidade, experiência do usuário e
+                        criação de interfaces simples e eficientes.
+                    </p>
+                </div>
+            </article>
+
+            <article class="livro">
+                <img src="img/rede.jpg" alt="Livro Redes de Computadores">
+                <div class="livro-conteudo">
+                    <h2>Redes de Computadores</h2>
+                    <p class="autor">Autor: Andrew S. Tanenbaum</p>
+                    <p>
+                        Aborda os principais conceitos de redes, protocolos, comunicação
+                        de dados e infraestrutura de internet.
+                    </p>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechLibrary - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

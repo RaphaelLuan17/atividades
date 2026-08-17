@@ -1,0 +1,672 @@
+:root {
+    --verde-escuro: #214a36;
+    --verde: #3f7d58;
+    --verde-claro: #dceadf;
+    --creme: #fff8ec;
+    --areia: #e8d3b0;
+    --terracota: #b66a3c;
+    --texto: #26342d;
+    --branco: #ffffff;
+
+    --sombra: 0 18px 45px rgba(33, 74, 54, 0.15);
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--creme);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   TOPO
+========================= */
+
+.topo {
+    width: 100%;
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+    padding: 15px 6%;
+
+    background: var(--verde-escuro);
+    color: var(--branco);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   MARCA
+========================= */
+
+.marca {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    color: var(--branco);
+    text-decoration: none;
+
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.logo {
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--branco);
+    border: 3px solid var(--branco);
+
+    flex-shrink: 0;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 22px;
+}
+
+.menu a {
+    color: var(--branco);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    position: relative;
+
+    transition: 0.25s ease;
+}
+
+.menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--areia);
+
+    transition: 0.25s ease;
+}
+
+.menu a:hover {
+    color: var(--areia);
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner {
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 6%;
+
+    background:
+        linear-gradient(
+            rgba(33, 74, 54, 0.35),
+            rgba(33, 74, 54, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80")
+        center / cover no-repeat;
+}
+
+.banner-menor {
+    min-height: 410px;
+
+    background:
+        linear-gradient(
+            rgba(33, 74, 54, 0.35),
+            rgba(33, 74, 54, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=1600&q=80")
+        center / cover no-repeat;
+}
+
+
+/* =========================
+   CONTEÚDO DO BANNER
+========================= */
+
+.banner-conteudo {
+    max-width: 650px;
+
+    padding: 42px;
+
+    background: rgba(255, 248, 236, 0.94);
+
+    border-left: 8px solid var(--terracota);
+
+    border-radius: 24px;
+
+    box-shadow: var(--sombra);
+}
+
+.tag,
+.subtitulo {
+    color: var(--terracota);
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+.banner-conteudo p {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h1 {
+    color: var(--verde-escuro);
+
+    font-size: clamp(2.2rem, 5vw, 4.3rem);
+
+    line-height: 1.05;
+
+    margin: 12px 0 18px;
+}
+
+h2 {
+    color: var(--verde-escuro);
+
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+    margin-bottom: 16px;
+}
+
+h3 {
+    color: var(--verde-escuro);
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 58px 6%;
+}
+
+.secao {
+    margin-bottom: 42px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    background: var(--branco);
+
+    border-radius: 24px;
+
+    box-shadow: var(--sombra);
+
+    padding: 32px;
+}
+
+
+/* =========================
+   GRID DUPLA
+========================= */
+
+.grade-dupla {
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 24px;
+}
+
+
+/* =========================
+   CARDS DE DESTAQUE
+========================= */
+
+.cards-servicos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.servico {
+    background: var(--branco);
+
+    border-radius: 24px;
+
+    box-shadow: var(--sombra);
+
+    padding: 32px;
+
+    border-top: 6px solid var(--verde);
+
+    transition: 0.25s ease;
+}
+
+.servico:hover {
+    transform: translateY(-6px);
+}
+
+.servico span {
+    display: inline-block;
+
+    font-size: 2.3rem;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.grade-produtos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.produto-card {
+    background: var(--branco);
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow: var(--sombra);
+
+    transition: 0.25s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 55px rgba(33, 74, 54, 0.2);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 230px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.produto-conteudo {
+    padding: 24px;
+}
+
+.produto-conteudo h3 {
+    font-size: 1.25rem;
+}
+
+.produto-conteudo p {
+    margin-bottom: 16px;
+}
+
+.produto-conteudo strong {
+    display: block;
+
+    color: var(--terracota);
+
+    font-size: 1.4rem;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   LOCALIZAÇÃO
+========================= */
+
+.localizacao ul {
+    margin-left: 20px;
+
+    margin-top: 14px;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.botao {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 13px 24px;
+
+    border-radius: 999px;
+
+    border: 2px solid var(--terracota);
+
+    background: var(--terracota);
+
+    color: var(--branco);
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.botao:hover {
+    background: var(--verde-escuro);
+
+    border-color: var(--verde-escuro);
+
+    color: var(--branco);
+
+    transform: translateY(-2px);
+}
+
+.botao-secundario {
+    background: transparent;
+
+    color: var(--terracota);
+}
+
+
+/* =========================
+   CONTATOS
+========================= */
+
+.contato-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 22px;
+}
+
+
+/* =========================
+   FORMULÁRIOS
+========================= */
+
+form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+form label {
+    color: var(--verde-escuro);
+
+    font-weight: 700;
+
+    margin-top: 8px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 2px solid var(--verde-claro);
+
+    border-radius: 12px;
+
+    background: var(--branco);
+
+    color: var(--texto);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--verde);
+
+    box-shadow:
+        0 0 0 4px rgba(63, 125, 88, 0.12);
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-area {
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.login-card {
+    width: 100%;
+
+    max-width: 480px;
+
+    padding: 40px;
+
+    background: var(--branco);
+
+    border-radius: 24px;
+
+    box-shadow: var(--sombra);
+}
+
+.login-card h1 {
+    font-size: 2.5rem;
+
+    margin-bottom: 8px;
+}
+
+.login-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 22px;
+
+    text-align: center;
+}
+
+.login-links a {
+    color: var(--verde);
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.login-links a:hover {
+    color: var(--terracota);
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background: var(--verde-escuro);
+
+    color: var(--branco);
+
+    padding: 30px 6%;
+
+    text-align: center;
+}
+
+footer a {
+    color: var(--branco);
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--areia);
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+    .cards-servicos,
+    .grade-produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grade-dupla {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .topo {
+        position: static;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .banner,
+    .banner-menor {
+        min-height: auto;
+
+        padding: 40px 5%;
+    }
+
+    .banner-conteudo {
+        padding: 28px;
+    }
+
+    .cards-servicos,
+    .grade-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .login-card {
+        padding: 28px;
+    }
+
+}
